@@ -7,6 +7,8 @@ import java.util.Date;
 
 import org.json.JSONObject;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -28,4 +30,10 @@ public class NasaController {
 		} catch (Exception e) {return new Image(new Date(), e.getMessage());}
 		
     }
+	
+	@RequestMapping(value="/register", method=RequestMethod.PUT)
+	public User register(@RequestParam(value="name", defaultValue="World") String name, @RequestParam(value="password", defaultValue="password") String password) {
+		User u = new User(name, password);
+		return u;
+	}
 }
