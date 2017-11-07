@@ -36,4 +36,6 @@ dependencies {
     // end::actuator[]
     testCompile("junit:junit")
     testCompile("org.springframework.boot:spring-boot-starter-test")
+    testCompile('org.json:json')
+    
 }
