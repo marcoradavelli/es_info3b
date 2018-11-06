@@ -2,6 +2,7 @@ package org.counter;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.fail;
 
+import org.junit.Rule;
 import org.junit.jupiter.api.Test;
 
 class CounterTest {
@@ -22,5 +23,13 @@ class CounterTest {
 	void testDec() {
 		fail("Not yet implemented");
 	}
+	
+	/*@Test(expected=Exception.class)
+	void testDivException() {
+		Counter c = new Counter();
+		c.inc();
+		c.inc();
+		c.div(0);
+	}*/
 
 }

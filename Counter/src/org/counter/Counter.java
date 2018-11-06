@@ -7,4 +7,9 @@ public class Counter {
 	public int dec() {return --count;}
 	
 	public int inc(int n) {return ++n;}
+	
+	public int div(int n) throws Exception {
+		if (n==0) throw new Exception("Divisione per 0");
+		return count/=n;
+	}
 }
