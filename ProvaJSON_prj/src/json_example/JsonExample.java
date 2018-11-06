@@ -44,7 +44,7 @@ public class JsonExample {
             JSONObject o = new JSONObject(s);
             System.out.println("URL Immagine: " + o.getString("url"));
             System.out.println("Titolo: " + o.getString("title"));
-            
+            /*
             System.out.print("TAGS: ");
             //JSONArray a = o.getJSONArray("concepts"); // C'era un JSONArray dentro il JSONObject, che nel 2016 è stato disabilitato, per un cambiamento delle API
             //for (int i=0; i<a.length(); i++) System.out.print( a.getString(i) + (i<a.length()-1 ? ", " : "") );
@@ -56,7 +56,7 @@ public class JsonExample {
              * - data di oggi
              * - un array con il nome dell'utente e il suo gradimento, per 3 utenti diversi (gradimento è casuale da 1 a 10)
              */
-            JSONObject myAttr = new JSONObject();
+            /*JSONObject myAttr = new JSONObject();
             myAttr.accumulate("data", new SimpleDateFormat("dd-MM-yyyy").format(new Date()));
             
             JSONArray gradimenti = new JSONArray();
@@ -67,7 +67,7 @@ public class JsonExample {
             }
             myAttr.put("gradimenti", gradimenti); // Si usa "put" per aggiungere un array
             o.accumulate("myAttr", myAttr);
-            System.out.println("\nJSON CON ATTRIBUTI AGGIUNTI:\n"+ o.toString(2)); // Stampa il JSON Finale, indentandolo con una distanza di 2 spazi
+            System.out.println("\nJSON CON ATTRIBUTI AGGIUNTI:\n"+ o.toString(2)); // Stampa il JSON Finale, indentandolo con una distanza di 2 spazi*/
         } catch (Exception e) {
         	e.printStackTrace();
         }
